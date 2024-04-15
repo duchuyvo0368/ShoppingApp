@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "name": "electronics",
+    "image": "https://png.pngtree.com/png-vector/20190214/ourlarge/pngtree-electronics-icon-png-image_428294.jpg"
+  },
+  {
+    "id": "2",
+    "name": "jewelery",
+    "image": "https://media.4rgos.it/i/Argos/2721-M027-TU-IMG-2204804?w=auto&poi={$this.metadata.pointOfInterest.x},{$this.metadata.pointOfInterest.y},{$this.metadata.pointOfInterest.w},{$this.metadata.pointOfInterest.h}&scaleFit={($this.metadata.pointOfInterest.x%3E0)?$sfpoi:$sfcenter}&sm=aspect&aspect=1:1&sfcenter=center&sfpoi=poi&qlt=50&fmt=auto&noiser=0&fmt.jpeg.interlaced=true&fmt.jp2.qlt=40&w=600&"
+  },
+  {
+    "id": "3",
+    "name": "men's clothing",
+    "image": "https://m.media-amazon.com/images/I/31usbvIwvzL._AC_SY350_.jpg"
+  },
+  {
+    "id": "4",
+    "name": "women's clothing",
+    "image": "https://cdn-icons-png.flaticon.com/512/3534/3534317.png"
+  },
+  {
+    "id": "5",
+    "name": "sport",
+    "image": "https://i.pinimg.com/736x/f6/74/6a/f6746a1007aced5c7c533a69ef6463b3.jpg"
+  },
+  {
+    "id": "6",
+    "name": "nike",
+    "image": "https://i.pinimg.com/736x/f6/74/6a/f6746a1007aced5c7c533a69ef6463b3.jpg"
+  }
+]

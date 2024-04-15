@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            app:srcCompat="@drawable/ic_nike_logo"
+            app:tint="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/tv_title"
+            android:textAppearance="?textAppearanceHeadline5" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.8"
+            android:layout_marginTop="8dp"
+            android:textAppearance="?textAppearanceBody1"
+            android:text="Nhập email và mật khẩu của bạn" />
+
+        <EditText
+            android:id="@+id/emailEt"
+            android:layout_width="@dimen/authViewWith"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="start|center_vertical"
+            android:inputType="textEmailAddress"
+            style="@style/Widget.AppCompat.EditText"
+            android:hint="Nhập email" />
+
+        <EditText
+            android:id="@+id/passwordEt"
+            android:layout_width="@dimen/authViewWith"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="start|center_vertical"
+            android:inputType="textPassword"
+            style="@style/Widget.AppCompat.EditText"
+            android:hint="Nhập mật khẩu" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/signUpBtn"
+            android:layout_width="@dimen/authViewWith"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="Đăng kí" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="bottom"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/loginLinkBtn"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:fontFamily="@font/primary_bold"
+            android:text="Đăng nhập" />
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

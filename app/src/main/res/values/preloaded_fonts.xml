@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/abel</item>
+        <item>@font/advent_pro_medium</item>
+        <item>@font/andika</item>
+        <item>@font/catamaran_light</item>
+        <item>@font/muli_light</item>
+        <item>@font/nunito_light</item>
+    </array>
+</resources>
