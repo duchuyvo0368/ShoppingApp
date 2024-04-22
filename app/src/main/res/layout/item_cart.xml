@@ -17,6 +17,7 @@
         android:layout_marginBottom="10dp"
         android:layout_height="100dp">
         <ImageView
+            android:id="@+id/ivCart"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
@@ -29,18 +30,21 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
         <TextView
+            android:id="@+id/tvCartName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="24sp"
             android:fontFamily="@font/primary_bold"
             tools:text="Product Name"/>
         <TextView
+            android:id="@+id/tvCartDescribe"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:text="Product Name"
             android:textSize="14sp"
             />
         <TextView
+            android:id="@+id/tvCartPrice"
             android:layout_marginBottom="5dp"
             android:gravity="center_vertical"
             android:layout_width="match_parent"

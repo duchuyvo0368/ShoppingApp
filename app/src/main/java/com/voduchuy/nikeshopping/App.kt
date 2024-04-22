@@ -6,6 +6,8 @@ import com.facebook.drawee.backends.pipeline.Fresco
 import com.voduchuy.nikeshopping.data.db.AppDatabase
 import com.voduchuy.nikeshopping.data.repo.banner.BannerRepository
 import com.voduchuy.nikeshopping.data.repo.banner.BannerRepositoryImpl
+import com.voduchuy.nikeshopping.data.repo.cart.CartRepository
+import com.voduchuy.nikeshopping.data.repo.cart.CartRepositoryImpl
 import com.voduchuy.nikeshopping.data.repo.category.CategoryRepository
 import com.voduchuy.nikeshopping.data.repo.category.CategoryRepositoryImpl
 import com.voduchuy.nikeshopping.data.repo.productdetail.ProductDetailRepository
@@ -13,10 +15,12 @@ import com.voduchuy.nikeshopping.data.repo.productdetail.ProductDetailRepository
 import com.voduchuy.nikeshopping.data.repo.product.ProductRepository
 import com.voduchuy.nikeshopping.data.repo.product.ProductRepositoryImpl
 import com.voduchuy.nikeshopping.data.repo.source.banner.BannerRemoteDataSource
+import com.voduchuy.nikeshopping.data.repo.source.cart.CartRemoteDataSource
 import com.voduchuy.nikeshopping.data.repo.source.category.CategoryRemoteDataSource
 import com.voduchuy.nikeshopping.data.repo.source.productdetail.ProductDetailRemoteDataSource
 import com.voduchuy.nikeshopping.data.repo.source.product.ProductRemoteDataSource
 import com.voduchuy.nikeshopping.data.services.createApiServiceInstance
+import com.voduchuy.nikeshopping.ui.cart.CartViewModel
 import com.voduchuy.nikeshopping.ui.home.HomeViewModel
 import com.voduchuy.nikeshopping.ui.product.ProductDetailViewModel
 import org.koin.android.ext.koin.androidContext
@@ -52,8 +56,10 @@ class App : Application() {
                     )
                 )
             }
+            factory <CartRepository>{ CartRepositoryImpl(CartRemoteDataSource(get())) }
             viewModel { HomeViewModel(get(), get(), get()) }
             viewModel { (productId: Int) -> ProductDetailViewModel(productId, get()) }
+            viewModel{CartViewModel(get())}
 
         }
         startKoin {

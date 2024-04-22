@@ -2,6 +2,7 @@ package com.voduchuy.nikeshopping.data.services
 
 import com.voduchuy.nikeshopping.data.model.Product
 import com.voduchuy.nikeshopping.data.TokenContainer
+import com.voduchuy.nikeshopping.data.model.Cart
 import io.reactivex.Single
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -16,6 +17,8 @@ interface ApiService {
     fun getProducts(): Single<List<Product>>
     @GET("products/{id}")
     fun getProductDetail(@Path("id") id: Int):Single<Product>
+    @GET("carts/user/{id}")
+    fun getCart(@Path("id") id: Int):Single<List<Cart>>
 
 }
 
