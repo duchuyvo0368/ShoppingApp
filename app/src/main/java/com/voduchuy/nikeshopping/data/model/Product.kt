@@ -22,4 +22,5 @@ data class Product(
     val rating: Rating
 ) : Parcelable {
     var isFavorite: Boolean = false
+    var quantity:Int?=null
 }

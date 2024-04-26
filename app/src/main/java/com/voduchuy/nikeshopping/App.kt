@@ -56,10 +56,10 @@ class App : Application() {
                     )
                 )
             }
-            factory <CartRepository>{ CartRepositoryImpl(CartRemoteDataSource(get())) }
+            factory<CartRepository> { CartRepositoryImpl(CartRemoteDataSource(get())) }
             viewModel { HomeViewModel(get(), get(), get()) }
             viewModel { (productId: Int) -> ProductDetailViewModel(productId, get()) }
-            viewModel{CartViewModel(get())}
+            viewModel { CartViewModel(get()) }
 
         }
         startKoin {

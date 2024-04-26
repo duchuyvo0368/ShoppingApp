@@ -1,60 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="#fefefe"
-    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:layout_marginStart="10dp"
-    android:layout_marginEnd="10dp"
-    android:layout_height="wrap_content">
+    android:layout_marginTop="15dp"
+    android:layout_marginEnd="10dp">
+
     <com.google.android.material.card.MaterialCardView
-        android:layout_width="100dp"
+        android:id="@+id/layoutImage"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
         app:cardCornerRadius="10dp"
-        app:strokeColor="#E8DFDF"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:layout_height="100dp">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="#E8DFDF">
+
         <ImageView
             android:id="@+id/ivCart"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            tools:src="@color/background"/>
+            tools:src="@color/background" />
 
     </com.google.android.material.card.MaterialCardView>
+
     <LinearLayout
-       android:layout_marginTop="12dp"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_gravity="center"
+        android:orientation="vertical"
+       android:layout_margin="5dp"
+        app:layout_constraintStart_toEndOf="@id/layoutImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
         <TextView
             android:id="@+id/tvCartName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="24sp"
             android:fontFamily="@font/primary_bold"
-            tools:text="Product Name"/>
+            android:textSize="16sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            tools:text="Product Name" />
+
         <TextView
             android:id="@+id/tvCartDescribe"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:text="Product Name"
-            android:textSize="14sp"
-            />
+            android:text="Product Name"
+            android:textSize="14sp" />
+
         <TextView
             android:id="@+id/tvCartPrice"
-            android:layout_marginBottom="5dp"
-            android:gravity="center_vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:text="$ 90"
-            android:textSize="23sp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center_vertical"
+            android:textSize="14sp"
             android:textStyle="bold"
-            />
+            tools:text="$ 90" />
 
 
     </LinearLayout>
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
